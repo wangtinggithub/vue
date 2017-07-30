@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium adipisci consequuntur debitis dolorem eveniet exercitationem facilis minus necessitatibus nihil numquam obcaecati omnis, porro provident quaerat reprehenderit tenetur totam ut!                                    </p>
   </div>
 </template>
 <script>
