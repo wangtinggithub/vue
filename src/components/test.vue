@@ -9,7 +9,7 @@
     name: 'sheet',
     data () {
       return {
-        msg: 'Test page'
+        msg: 'Test'
       }
     }
   }
