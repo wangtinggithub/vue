@@ -1,15 +1,5 @@
 <template>
   <div id="app">
-    <div class="container">
-      <div class="left">
-        <ul>
-          <li class="nav">
-            <router-link to="/sheet">sheet</router-link>
-          </li>
-
-        </ul>
-      </div>
-    </div>
     <router-view></router-view>
   </div>
 </template>
@@ -27,6 +17,16 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 0px;
+  height: 100%;
+  overflow: hidden;
 }
+html,body{
+  height:100%;
+
+}
+  *{
+    margin:0px;
+    padding: 0px;
+  }
 </style>

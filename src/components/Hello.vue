@@ -1,23 +1,26 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-      <br>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+<div class="body">
+  <header>
+    {{ msg }}
+  </header>
+  <div class="container">
+    <div class="left">
+      <ul>
+        <li class="link">
+          <router-link to="/sheet">sheet</router-link>
+        </li>
+        <li class="link">
+          <router-link to="/detail">detail</router-link>
+        </li>
+
+      </ul>
+    </div>
+  <div class="right">
+    <router-view></router-view>
   </div>
+</div>
+</div>
+
 </template>
 
 <script>
@@ -33,6 +36,45 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .body{
+    position: relative;
+    height:100%;
+  }
+  header{
+    background: black;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+  }
+  .container{
+    height: calc(100% - 50px);
+  }
+  .link{
+    display: block;
+    padding: 0px;
+    margin:0px;
+  }
+  .link a{
+    display: block;
+    padding: 10px 10px ;
+    text-decoration: none;
+    color:black;
+    background: #ddd;
+  }
+  .left{
+    width: 300px;
+    height: 100%;
+    background: #eee;
+    float: left;
+  }
+  .right{
+    width:calc(100% - 300px);
+    float: left;
+    height:100%;
+    overflow: auto;
+  }
 h1, h2 {
   font-weight: normal;
 }

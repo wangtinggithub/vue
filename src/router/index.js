@@ -10,12 +10,23 @@ export default new Router({
     {
       path: '/',
       name: 'Hello',
-      component: Hello
-    },
-    {
-      path: '/sheet',
-      name: 'sheet',
-      component: Sheet
+      component: Hello,
+      children:[
+        {
+          path: 'sheet',
+          name: 'sheet',
+          component: Sheet
+        },
+        {
+          path:'detail',
+          name:'detail',
+          component:function (resolve) {
+            require(['@/components/detail'],resolve)
+          }
+        }
+      ]
     }
+
+
   ]
 })

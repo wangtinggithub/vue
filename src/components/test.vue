@@ -1,7 +1,6 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
   </div>
 </template>
 <script>
@@ -9,7 +8,7 @@
     name: 'sheet',
     data () {
       return {
-        msg: 'hehe Test'
+        msg: 'hehe wangting'
       }
     }
   }
