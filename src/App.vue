@@ -1,6 +1,15 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <div class="container">
+      <div class="left">
+        <ul>
+          <li class="nav">
+            <router-link to="/sheet">sheet</router-link>
+          </li>
+
+        </ul>
+      </div>
+    </div>
     <router-view></router-view>
   </div>
 </template>
