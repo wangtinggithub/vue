@@ -5,7 +5,7 @@ import Sheet from '@/components/test'
 
 Vue.use(Router)
 
-export default new Router({
+const router= new Router({
   routes: [
     {
       path: '/',
@@ -30,3 +30,10 @@ export default new Router({
 
   ]
 })
+router.beforeEach((to, from, next) => {
+  var login=true;
+  if(login){
+    window.location.href="http://www.baidu.com"
+  }
+})
+export default router;
